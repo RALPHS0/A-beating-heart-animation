@@ -1,0 +1,55 @@
+body{
+ margin:0;
+ padding:0;
+ min-height:100vh;
+ display:flex;
+ justify-content: center;
+ align-items:center;
+ background-color: #262626;
+}
+.Heart{
+ width:100px;
+ height:100px;
+ background-color: red;
+ transform:rotate(-45deg);
+ box-shadow:-10px 10px 120px red;
+ animation: heart 0.5s linear infinite;
+}
+
+@keyframes heart{
+ 
+ 0%{
+  transform:rotate(-45deg) scale(1.07);
+ }
+ 
+ 100%{
+  transform:rotate(-45deg) scale(1.0);
+ }
+ 
+ 100%{
+  transform:rotate(-45deg) scale(0.8);
+ }
+ 
+}
+
+.Heart:before{
+ content:'';
+ position:absolute;
+ width:100px;
+ height: 100px;
+ background-color: red;
+ top:-50%;
+ border-radius:60px;
+ box-shadow: -10px 10px 120px red;
+}
+
+.Heart:after{
+ content:'';
+ position:absolute;
+ width:100px;
+ height: 100px;
+ background-color: red;
+ right:-50%;
+ border-radius:60px;
+ box-shadow: -10px 10px 120px red;
+}
